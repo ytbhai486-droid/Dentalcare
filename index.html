@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Smile Care Dental Clinic — Creating Healthy & Beautiful Smiles with Dr. Richa.">
+  <meta name="theme-color" content="#0878c9">
+  <title>Smile Care Dental Clinic | Dr. Richa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+<header class="header">
+  <nav class="nav">
+    <a class="brand" href="#home"><span class="logo">🦷</span><span><b>Smile Care</b><small>Dental Clinic</small></span></a>
+    <div class="links" id="navLinks">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#why">Why Us</a><a href="#reviews">Reviews</a><a href="#gallery">Gallery</a><a href="#assistant">AI Assistant</a><a href="#contact">Contact</a>
+      <a class="nav-btn" href="#appointment">Book Appointment</a>
+    </div>
+    <button class="theme" id="themeBtn" aria-label="Toggle theme">☾</button>
+    <button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <span class="eyebrow">✦ Modern care · Human touch</span>
+      <h1>Your Smile <em>Deserves</em> the Best Care</h1>
+      <p>Expert dental care by <strong>Dr. Richa</strong> using modern technology and compassionate treatment.</p>
+      <div class="actions"><a class="btn primary" href="#appointment">Book Appointment →</a><button class="btn secondary" onclick="openChat()">🤖 Chat with AI Assistant</button></div>
+      <div class="trust"><span>✓ Gentle care</span><span>✓ Modern technology</span><span>✓ Patient-first</span></div>
+    </div>
+    <div class="hero-photo reveal">
+      <div class="photo-wrap"><img src="assets/doctor-richa.png" alt="Dr. Richa at Smile Care Dental Clinic"></div>
+      <div class="float one">🛡️ Sterile & Safe</div><div class="float two">★ 4.9 Patient Rating</div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+<div class="container two-col">
+  <div class="about-photo reveal"><img src="assets/doctor-richa.png" alt="Dr. Richa" loading="lazy"></div>
+  <div class="reveal"><span class="eyebrow">Meet your dentist</span><h2>Care that feels <em>personal.</em></h2>
+  <p class="lead">At Smile Care Dental Clinic, every treatment starts with listening. Dr. Richa combines a patient-first approach with modern equipment and gentle treatment planning.</p>
+  <div class="checks"><p>✓ <b>Patient-first approach</b><small>Clear explanations and comfortable care.</small></p><p>✓ <b>Modern equipment</b><small>Technology supporting accurate diagnosis and treatment.</small></p><p>✓ <b>Gentle philosophy</b><small>Comfort and trust at every stage.</small></p></div>
+  <div class="stats"><div><b>1000+</b><small>Happy Patients</small></div><div><b>10+</b><small>Years Experience</small></div><div><b>15+</b><small>Dental Services</small></div><div><b>4.9★</b><small>Patient Rating</small></div></div></div>
+</div></section>
+
+<section id="services" class="section soft"><div class="container"><div class="section-title reveal"><span class="eyebrow">Comprehensive care</span><h2>Dental services, <em>beautifully delivered.</em></h2></div><div class="cards" id="serviceCards"></div></div></section>
+
+<section id="why" class="section"><div class="container"><div class="section-title center reveal"><span class="eyebrow">Why Smile Care</span><h2>A better dental experience from <em>start to finish.</em></h2></div><div class="cards" id="whyCards"></div></div></section>
+
+<section id="reviews" class="section soft"><div class="container review"><div class="reveal"><span class="eyebrow">Patient stories</span><h2>Kind words from <em>happy smiles.</em></h2><p class="lead">Placeholder reviews — replace these with the clinic's verified reviews before launch.</p><div><button class="circle" onclick="prevReview()">←</button><button class="circle" onclick="nextReview()">→</button></div></div><div class="testimonial reveal"><div class="stars">★★★★★</div><blockquote id="reviewText"></blockquote><b id="reviewName"></b><small>Verified patient · Placeholder</small></div></div></section>
+
+<section id="gallery" class="section"><div class="container"><div class="section-title reveal"><span class="eyebrow">Inside Smile Care</span><h2>A clinic designed around <em>comfort.</em></h2></div><div class="gallery"><div class="gallery-main"><img src="assets/doctor-richa.png" alt="Smile Care clinic" loading="lazy"><span>Modern treatment environment</span></div><div class="placeholder">🦷<b>Reception</b><small>Add clinic photo</small></div><div class="placeholder">🪥<b>Treatment Room</b><small>Add clinic photo</small></div><div class="placeholder">🛡️<b>Sterilized Equipment</b><small>Add clinic photo</small></div><div class="placeholder">😊<b>Happy Patients</b><small>Add clinic photo</small></div></div></div></section>
+
+<section id="appointment" class="appointment"><div class="container two-col">
+<div class="reveal"><span class="eyebrow">Your next smile starts here</span><h2>Book your visit with <em>Dr. Richa.</em></h2><p>Share your preferred date and treatment. Our team will contact you to confirm the appointment.</p><div class="mini-doctor"><img src="assets/doctor-richa.png" alt="Dr. Richa"><span><b>Dr. Richa</b><small>Cosmetic & General Dentist</small></span></div></div>
+<form id="appointmentForm" class="form reveal">
+  <div class="form-grid">
+    <label>Full Name*<input name="name" required></label><label>Phone Number*<input name="phone" type="tel" required></label>
+    <label>Email Address<input name="email" type="email"></label><label>Age<input name="age" type="number" min="1" max="120"></label>
+    <label>Gender<select name="gender"><option value="">Select</option><option>Female</option><option>Male</option><option>Other</option><option>Prefer not to say</option></select></label>
+    <label>Service*<select name="service" required><option value="">Choose a service</option></select></label>
+    <label>Date*<input name="date" id="date" type="date" required></label><label>Time*<input name="time" type="time" required></label>
+    <label class="full">Additional Message<textarea name="message" rows="4"></textarea></label>
+  </div>
+  <button class="btn primary full" id="submitBtn">Book Appointment →</button>
+  <div id="formStatus"></div>
+</form></div></section>
+
+<section id="assistant" class="section"><div class="container ai-banner"><div><span class="eyebrow">🤖 Smart dental guidance</span><h2>Have a dental question?</h2><p>Ask Smile Care AI Assistant about common dental topics.</p></div><button class="btn primary" onclick="openChat()">Open AI Assistant →</button></div></section>
+
+<section id="contact" class="section soft"><div class="container two-col"><div class="reveal"><span class="eyebrow">Contact</span><h2>Let's take care of your <em>smile.</em></h2><div class="contact"><p>📞 <b>Call</b><br><a href="tel:+910000000000">+91 00000 00000</a></p><p>✉️ <b>Email</b><br><a href="mailto:contact@smilecare.example">contact@smilecare.example</a></p><p>📍 <b>Clinic</b><br>Your Clinic Address, Your City, India</p><p>🕘 <b>Working hours</b><br>Mon–Sat · 9:00 AM – 7:00 PM</p></div><div class="actions"><a class="btn primary" href="tel:+910000000000">Call Clinic</a><a class="btn whatsapp" href="https://wa.me/910000000000" target="_blank">WhatsApp</a></div></div><div class="map"><iframe title="Google Map" src="https://www.google.com/maps?q=dental%20clinic%20India&output=embed" loading="lazy"></iframe></div></div></section>
+</main>
+
+<footer><div class="container footer"><div><a class="brand" href="#home"><span class="logo">🦷</span><span><b>Smile Care</b><small>Dental Clinic</small></span></a><p>Creating Healthy & Beautiful Smiles.</p></div><div><b>Quick Links</b><a href="#services">Services</a><a href="#appointment">Appointments</a><a href="#reviews">Reviews</a></div><div><b>Contact</b><span>+91 00000 00000</span><span>contact@smilecare.example</span></div><div><b>Follow</b><span>Instagram · Facebook</span></div></div><div class="copyright">© 2026 Smile Care Dental Clinic · Privacy Policy · Terms & Conditions</div></footer>
+
+<button class="floating whatsapp" onclick="window.open('https://wa.me/910000000000','_blank')">💬</button><button class="floating ai-float" onclick="openChat()">🤖</button>
+<div id="chat" class="chat hidden"><div class="chat-head"><b>🤖 Smile Care AI Assistant</b><button onclick="closeChat()">×</button></div><div id="chatBody" class="chat-body"><div class="msg bot">Hi! I’m Smile Care AI Assistant. How can I help?</div></div><div class="quick"><button onclick="askAI('Clinic timings')">Timings</button><button onclick="askAI('Root canal')">Root canal</button><button onclick="askAI('Tooth pain')">Tooth pain</button><button onclick="location.hash='appointment'">Book</button></div></div>
+
+<script src="script.js"></script>
+</body></html>
